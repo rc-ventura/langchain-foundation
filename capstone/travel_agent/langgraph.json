@@ -1,0 +1,7 @@
+{
+    "dependencies": ["."],
+    "graphs": {
+        "agent": "./travel_agents.py:get_coordinator"
+    },
+    "env": "../../.env"
+  }

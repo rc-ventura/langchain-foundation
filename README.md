@@ -51,10 +51,39 @@ To prototype the "Personal Chef" agent without building a custom UI:
 ## 📂 Modules
 
 ### Module 1: Personal Chef Agent
-Located in `module-1/personal_chef.py`.
-- **Goal**: A diet-focused agent that can substitute ingredients using web search.
-- **Stack**: LangGraph `create_agent`, Tavily Search, OpenAI.
-- **Configuration**: Defined in `langgraph.json`.
+Located in `module-01/`.
+- **Goal**: Master foundational prompting, tools, and basic agent flows.
+- **Artifacts**: Jupyter notebooks (e.g., prompting, tools, web search).
+
+### Module 2: MCP & Runtime Context
+Located in `module-02/`.
+- **Goal**: Learn MCP servers, runtime context, and stateful agent patterns.
+- **Artifacts**: MCP server example, travel agent notebook, state/context notebooks.
+
+### Module 3: Advanced Agent UX & Dynamic Behavior
+Located in `module-03/`.
+- **Goal**: Build richer UX flows and dynamic agent behaviors.
+- **Artifacts**: Agent chat UI, message management, HITL, dynamic prompts/models.
+
+## 🧳 Capstone Overview
+
+### Travel Agent (Wedding Coordinator)
+Location: `capstone/travel_agent`
+- **Goal**: Multi-agent wedding planning with MCP (Kiwi), Tavily, and a playlist DB.
+- **Run (CLI)**:
+  ```bash
+  uv run capstone/travel_agent/travel_agents.py
+  ```
+- **LangGraph Dev (UI)** (run inside the folder):
+  ```bash
+  langgraph dev
+  ```
+- **Config**: `capstone/travel_agent/langgraph.json` → `./travel_agents.py:get_coordinator`
+
+### Nutrition Agent (Personal Chef)
+Location: `capstone/nutrition_agent`
+- **Goal**: Personalized meal planning and substitutions.
+- **Artifacts**: `personal_chef.py` + `langgraph.json`
 
 ## 🔍 Observability (LangSmith)
 To trace your agent's thought process:
