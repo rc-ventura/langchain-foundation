@@ -30,15 +30,6 @@ class AuthenticatedState(AgentState):
     authenticated: bool
 
 
-# class HITL(HumanInTheLoopMiddleware): 
-#     def after_model(self, state, runtime):
-#        hilt_request = super().after_model(state, runtime)
-#        if isinstance(hilt_request, str):
-#          hilt_request = json.loads(hilt_request)
-#        return hilt_request
-           
-       
-
 @tool
 def check_inbox() -> str:
     """Check the inbox for recent emails"""
